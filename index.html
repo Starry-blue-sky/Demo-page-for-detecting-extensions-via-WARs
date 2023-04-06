@@ -99,12 +99,12 @@
     let xhr = new XMLHttpRequest();
   
     // 设置请求方法和 URL
-    xhr.open('GET', 'chrome-extension://dipiagiiohfljcicegpgffpbnjmgjcnf/fonts/*');
+    xhr.open('GET', 'chrome-extension://dipiagiiohfljcicegpgffpbnjmgjcnf/fonts/*', true);
   
   
     // 注册回调函数，处理响应
     xhr.onreadystatechange = function() {
-      if (xhr.readyState=XMLHttpRequest.DONE) {
+      if (xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
 
         // 如果响应成功，输出YES
         document.getElementById('response_0').innerHTML = 'YES';
@@ -126,14 +126,12 @@
   let xhr = new XMLHttpRequest();
 
   // 设置请求方法和 URL
-  xhr.open('GET', 'chrome-extension://aapbdbdomjkkjkaonfhkkikfgjllcleb/popup_css_compiled.css');
+  xhr.open('GET', 'chrome-extension://aapbdbdomjkkjkaonfhkkikfgjllcleb/popup_css_compiled.css', true);
 
-  // 设置响应类型
-  xhr.responseType = 'json';
 
   // 注册回调函数，处理响应
   xhr.onload = function() {
-    if (xhr.status === 200) {
+    if (xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
 
       // 如果响应成功，输出YES
       document.getElementById('response_1').innerHTML = 'YES';
@@ -155,14 +153,12 @@
   let xhr = new XMLHttpRequest();
 
   // 设置请求方法和 URL
-  xhr.open('GET', 'chrome-extension://fdpohaocaechififmbbbbbknoalclacl/p/*');
+  xhr.open('GET', 'chrome-extension://fdpohaocaechififmbbbbbknoalclacl/p/*', true);
 
-  // 设置响应类型
-  xhr.responseType = 'json';
 
   // 注册回调函数，处理响应
   xhr.onload = function() {
-    if (xhr.status === 200) {
+    if (xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
 
       // 如果响应成功，输出YES
       document.getElementById('response_2').innerHTML = 'YES';
