@@ -101,12 +101,10 @@
     // 设置请求方法和 URL
     xhr.open('GET', 'chrome-extension://dipiagiiohfljcicegpgffpbnjmgjcnf/fonts/*');
   
-    // 设置响应类型
-    xhr.responseType = 'json';
   
     // 注册回调函数，处理响应
-    xhr.onload = function() {
-      if (xhr.status === 200) {
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState=XMLHttpRequest.DONE) {
 
         // 如果响应成功，输出YES
         document.getElementById('response_0').innerHTML = 'YES';
