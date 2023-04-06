@@ -65,6 +65,7 @@
         <button onclick="makeRequest()">Send Request</button>
     </td>
     <td>10,000,000+</td>
+    <td id="response_0"></td>
     <td id=nndknepjnldbdbepjfgmncbggmopgden></td>
   </tr>
 
@@ -84,6 +85,7 @@
         <button onclick="makeRequest2()">Send Request</button>
     </td>
     <td>6,000,000+</td>
+    <td id="response_2"></td>
     <td id=fdpohaocaechififmbbbbbknoalclacl></td>
   </tr>
 
@@ -107,11 +109,11 @@
       if (xhr.status === 200) {
 
         // 如果响应成功，输出YES
-        document.getElementById('response_1').innerHTML = 'YES';
+        document.getElementById('response_0').innerHTML = 'YES';
 
       } else {
         // 如果响应失败，输出NO
-        document.getElementById('response_1').innerHTML = 'NO';
+        document.getElementById('response_0').innerHTML = 'NO';
       }
     };
   
@@ -165,11 +167,11 @@
     if (xhr.status === 200) {
 
       // 如果响应成功，输出YES
-      document.getElementById('response_1').innerHTML = 'YES';
+      document.getElementById('response_2').innerHTML = 'YES';
 
     } else {
       // 如果响应失败，输出NO
-      document.getElementById('response_1').innerHTML = 'NO';
+      document.getElementById('response_2').innerHTML = 'NO';
     }
   };
 
