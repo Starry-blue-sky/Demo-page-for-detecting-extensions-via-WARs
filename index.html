@@ -120,6 +120,63 @@
   }
 </script>
   
+<script type="text/javascript">
+  function makeRequest1() {
+  // 创建 XMLHttpRequest 对象
+  let xhr = new XMLHttpRequest();
+
+  // 设置请求方法和 URL
+  xhr.open('GET', 'chrome-extension://aapbdbdomjkkjkaonfhkkikfgjllcleb/popup_css_compiled.css');
+
+  // 设置响应类型
+  xhr.responseType = 'json';
+
+  // 注册回调函数，处理响应
+  xhr.onload = function() {
+    if (xhr.status === 200) {
+
+      // 如果响应成功，输出YES
+      document.getElementById('response_1').innerHTML = 'YES';
+
+    } else {
+      // 如果响应失败，输出NO
+      document.getElementById('response_1').innerHTML = 'NO';
+    }
+  };
+
+  // 发送请求
+  xhr.send();
+}
+</script>
+
+<script type="text/javascript">
+  function makeRequest1() {
+  // 创建 XMLHttpRequest 对象
+  let xhr = new XMLHttpRequest();
+
+  // 设置请求方法和 URL
+  xhr.open('GET', 'chrome-extension://fdpohaocaechififmbbbbbknoalclacl/p/*');
+
+  // 设置响应类型
+  xhr.responseType = 'json';
+
+  // 注册回调函数，处理响应
+  xhr.onload = function() {
+    if (xhr.status === 200) {
+
+      // 如果响应成功，输出YES
+      document.getElementById('response_1').innerHTML = 'YES';
+
+    } else {
+      // 如果响应失败，输出NO
+      document.getElementById('response_1').innerHTML = 'NO';
+    }
+  };
+
+  // 发送请求
+  xhr.send();
+}
+</script>
 
 </body>
 </html>
