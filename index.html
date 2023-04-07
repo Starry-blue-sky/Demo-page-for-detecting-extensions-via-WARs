@@ -114,6 +114,10 @@
         document.getElementById('response_0').innerHTML = 'NO';
       }
     };
+
+    xhr.onerror = function(){
+    document.getElementById('response_0').innerHTML = 'NO';
+    }
   
     // 发送请求
     xhr.send();
@@ -142,6 +146,10 @@
     }
   };
 
+  xhr.onerror = function(){
+    document.getElementById('response_1').innerHTML = 'NO';
+  }
+
   // 发送请求
   xhr.send();
 }
@@ -168,6 +176,10 @@
       document.getElementById('response_2').innerHTML = 'NO';
     }
   };
+  //当XMLHttpRequest对象遇到错误时，触发该事件
+  xhr.onerror = function(){
+    document.getElementById('response_2').innerHTML = 'NO';
+  }
 
   // 发送请求
   xhr.send();
