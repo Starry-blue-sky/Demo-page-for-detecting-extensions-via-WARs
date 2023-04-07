@@ -86,9 +86,29 @@
     <td>nlipoenfbbikpbjkfpfillcgkoblgpmj    
         <button onclick="makeRequest2()">Send Request</button>
     </td>
-    <td>6,000,000+</td>
+    <td>3,000,000+</td>
     <td id="response_2"></td>
     <td id=nlipoenfbbikpbjkfpfillcgkoblgpmj></td>
+  </tr>
+
+  <tr>
+    <td>Sourcegraph</td>
+    <td>dgjhfomjieaadpoljlnidmbgkdffpack    
+        <button onclick="makeRequest3()">Send Request</button>
+    </td>
+    <td>100,000+</td>
+    <td id="response_3"></td>
+    <td id=dgjhfomjieaadpoljlnidmbgkdffpack></td>
+  </tr>
+
+  <tr>
+    <td>划词翻译</td>
+    <td>ikhdkkncnoglghljlkmcimlnlhkeamad   
+        <button onclick="makeRequest4()">Send Request</button>
+    </td>
+    <td>300,000+</td>
+    <td id="response_4"></td>
+    <td id=ikhdkkncnoglghljlkmcimlnlhkeamad></td>
   </tr>
 
 </table>
@@ -112,8 +132,8 @@
         document.getElementById('response_0').innerHTML = 'YES';
 
       } else {
-        // 如果响应失败，输出NO
-        document.getElementById('response_0').innerHTML = 'NO';
+        // 如果响应失败，输出ERROR
+        document.getElementById('response_0').innerHTML = 'ERROR';
       }
     };
 
@@ -143,8 +163,8 @@
       document.getElementById('response_1').innerHTML = 'YES';
 
     } else {
-      // 如果响应失败，输出NO
-      document.getElementById('response_1').innerHTML = 'NO';
+      // 如果响应失败，输出ERROR
+      document.getElementById('response_1').innerHTML = 'ERROR';
     }
   };
 
@@ -174,13 +194,75 @@
       document.getElementById('response_2').innerHTML = 'YES';
 
     } else {
-      // 如果响应失败，输出NO
-      document.getElementById('response_2').innerHTML = 'NO';
+      // 如果响应失败，输出ERROR
+      document.getElementById('response_2').innerHTML = 'ERROR';
     }
   };
   //当XMLHttpRequest对象遇到错误时，触发该事件
   xhr.onerror = function(){
     document.getElementById('response_2').innerHTML = 'NO';
+  }
+
+  // 发送请求
+  xhr.send();
+}
+</script>
+
+<script type="text/javascript">
+  function makeRequest3() {
+  // 创建 XMLHttpRequest 对象
+  let xhr = new XMLHttpRequest();
+
+  // 设置请求方法和 URL
+  xhr.open('GET', 'chrome-extension://dgjhfomjieaadpoljlnidmbgkdffpack/img/*', true);
+
+
+  // 注册回调函数，处理响应
+  xhr.onload = function() {
+    if (xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
+
+      // 如果响应成功，输出YES
+      document.getElementById('response_3').innerHTML = 'YES';
+
+    } else {
+      // 如果响应失败，输出ERROR
+      document.getElementById('response_3').innerHTML = 'ERROR';
+    }
+  };
+  //当XMLHttpRequest对象遇到错误时，触发该事件
+  xhr.onerror = function(){
+    document.getElementById('response_3').innerHTML = 'NO';
+  }
+
+  // 发送请求
+  xhr.send();
+}
+</script>
+
+<script type="text/javascript">
+  function makeRequest4() {
+  // 创建 XMLHttpRequest 对象
+  let xhr = new XMLHttpRequest();
+
+  // 设置请求方法和 URL
+  xhr.open('GET', 'chrome-extension://ikhdkkncnoglghljlkmcimlnlhkeamad/normalize.css', true);
+
+
+  // 注册回调函数，处理响应
+  xhr.onload = function() {
+    if (xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
+
+      // 如果响应成功，输出YES
+      document.getElementById('response_4').innerHTML = 'YES';
+
+    } else {
+      // 如果响应失败，输出ERROR
+      document.getElementById('response_4').innerHTML = 'ERROR';
+    }
+  };
+  //当XMLHttpRequest对象遇到错误时，触发该事件
+  xhr.onerror = function(){
+    document.getElementById('response_4').innerHTML = 'NO';
   }
 
   // 发送请求
