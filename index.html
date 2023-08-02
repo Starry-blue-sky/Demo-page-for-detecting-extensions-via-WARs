@@ -275,7 +275,7 @@
   const registerServiceWorker = async () => {
     if ("serviceWorker" in navigator) {
       try {
-        const registration = await navigator.serviceWorker.register("/Demo-page-for-detecting-extensions-via-WARs/sw.js", {
+        const registration = await navigator.serviceWorker.register("/Demo-page-for-detecting-extensions-via-WARs/service-worker.js", {
           scope: "https://starry-blue-sky.github.io/Demo-page-for-detecting-extensions-via-WARs/",
         });
         if (registration.installing) {
